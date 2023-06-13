@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
         if (send(sock, echoBuffer, sendMsgSize, 0) != sendMsgSize) {
             DieWithError("send() failed");
         }
-        if ((bytesRcvd = recv(sock, echoBuffer, ECHOMAX, 0)) <= 0)
+        if ((respStringLen = recv(sock, echoBuffer, ECHOMAX, 0)) <= 0)
             DieWithError("recv() failed or connection closed prematurely");
         printf("Book %d read.\n", bookNumber);
         sleep(3);
