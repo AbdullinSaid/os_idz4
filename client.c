@@ -48,7 +48,8 @@ int main(int argc, char *argv[])
     echoServAddr.sin_family = AF_INET;                 /* Internet addr family */
     echoServAddr.sin_addr.s_addr = inet_addr(servIP);  /* Server IP address */
     echoServAddr.sin_port   = htons(echoServPort);     /* Server port */
-
+    
+    int n = 10;
      for(;;) {
         /* Send the string to the server */
         int bookNumber = rand() % n;
