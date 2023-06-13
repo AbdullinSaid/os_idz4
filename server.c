@@ -9,10 +9,6 @@
 #include <sys/shm.h>
 #include <sys/ipc.h>
 #include <sys/wait.h>
-
-void *ThreadMain(void *arg);
- 
-#define MAXPENDING 5
  
 void DieWithError(char *errorMessage)
 {
